@@ -1,0 +1,47 @@
+# Reading C:/altera_lite/15.1/modelsim_ase/tcl/vsim/pref.tcl
+# Loading project Q1
+vlog ../Q1
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:02:56 on Apr 19,2018
+# vlog -reportprogress 300 ../Q1 
+# ** Error: (vlog-2054) File "../Q1" is a directory.
+# 
+# End time: 22:02:56 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/altera_lite/15.1/modelsim_ase/win32aloem/vlog failed.
+vlog ../Q1/hdl/Mult_add.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:03:08 on Apr 19,2018
+# vlog -reportprogress 300 ../Q1/hdl/Mult_add.v 
+# -- Compiling module mul_add
+# 
+# Top level modules:
+# 	mul_add
+# End time: 22:03:08 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog ../Q1/hdl/testbench.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:03:23 on Apr 19,2018
+# vlog -reportprogress 300 ../Q1/hdl/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 22:03:23 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:03:31 on Apr 19,2018
+# Loading work.testbench
+# Loading work.mul_add
+add wave -position insertpoint  \
+sim:/testbench/OP
+add wave -position insertpoint  \
+sim:/testbench/A
+add wave -position insertpoint  \
+sim:/testbench/B
+add wave -position insertpoint  \
+sim:/testbench/result
+run 30 ns
+# End time: 22:04:09 on Apr 19,2018, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 0
